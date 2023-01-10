@@ -62,8 +62,6 @@ const cakeReducer = (state = initialCakeState, action) => {
         ...state,
         numOfCakes: state.numOfCakes + action.payload,
       };
-    default:
-      return state;
   }
 };
 
@@ -91,7 +89,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer, applyMiddleware(logger));
 
-console.log("initial state", store.getState());
+// console.log("initial state", store.getState());
 
 const unsubscribe = store.subscribe(() => {});
 
