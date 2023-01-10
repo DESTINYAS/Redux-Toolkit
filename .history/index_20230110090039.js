@@ -50,21 +50,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         numOfCakes: state.numOfCakes - 1,
+        numOfIcecreams: state.numOfIcecreams - 5,
       };
     case CAKE_RESTOCKED:
       return {
         ...state,
         numOfCakes: state.numOfCakes + action.payload,
-      };
-    case ICECREAM_ORDERED:
-      return {
-        ...state,
-        numOfIcecreams: state.numOfIcecreams - 1,
-      };
-    case ICECREAM_RESTOCKED:
-      return {
-        ...state,
-        numOfIcecreams: state.numOfIcecreams + action.payload,
       };
     default:
       return state;
@@ -84,16 +75,10 @@ const unsubscribe = store.subscribe(() =>
 // store.dispatch(orderCake());
 // store.dispatch(cakeRestock(3));
 
-const actions = bindActionCreators(
-  { orderCake, cakeRestock, orderIcecream, restockIcecream },
-  store.dispatch
-);
+const actions = bindActionCreators({ orderCake, cakeRestock }, store.dispatch);
 
 actions.orderCake();
 actions.orderCake();
 actions.orderCake();
 actions.cakeRestock(3);
-actions.orderIcecream();
-actions.orderIcecream();
-actions.restockIcecream(2);
 unsubscribe();

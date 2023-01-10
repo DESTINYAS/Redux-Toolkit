@@ -73,7 +73,7 @@ const reducer = (state = initialState, action) => {
 
 const store = createStore(reducer);
 
-console.log("initial state", store.getState());
+// console.log("initial state", store.getState());
 
 const unsubscribe = store.subscribe(() =>
   console.log("updated state", store.getState())

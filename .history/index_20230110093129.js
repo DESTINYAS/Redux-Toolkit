@@ -93,7 +93,6 @@ actions.orderCake();
 actions.orderCake();
 actions.orderCake();
 actions.cakeRestock(3);
-actions.orderIcecream();
-actions.orderIcecream();
+actions.orderIcecream(2);
 actions.restockIcecream(2);
 unsubscribe();
