@@ -38,7 +38,6 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_USERS_REQUESTED:
       return {
-        ...state,
         loading: true,
       };
     case FETCH_USERS_SUCCEDED:
@@ -60,7 +59,7 @@ const fetchUsers = () => {
   return function (dispatch) {
     dispatch(fetchUsersRequest());
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get("https://jsonplaceholder.typicode.com/userss")
       .then((response) => {
         // response.data is the users
         const users = response.data.map((user) => user.id);

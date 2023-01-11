@@ -38,7 +38,6 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_USERS_REQUESTED:
       return {
-        ...state,
         loading: true,
       };
     case FETCH_USERS_SUCCEDED:
