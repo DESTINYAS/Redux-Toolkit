@@ -1,4 +1,5 @@
 const redux = require("redux");
+
 const createStore = redux.createStore;
 const bindActionCreators = redux.bindActionCreators;
 const combineReducers = redux.combineReducers;
@@ -44,7 +45,7 @@ const initialCakeState = {
   numOfCakes: 10,
 };
 const initialIcecreamState = {
-  numOfIcecreams: 20,
+  numOfIcecreams: 10,
 };
 
 // (previousState,action)=>newState
@@ -77,11 +78,6 @@ const icecreamReducer = (state = initialIcecreamState, action) => {
       return {
         ...state,
         numOfIcecreams: state.numOfIcecreams + action.payload,
-      };
-    case CAKE_ORDERED:
-      return {
-        ...state,
-        numOfIcecreams: state.numOfIcecreams - 1,
       };
     default:
       return state;

@@ -23,9 +23,7 @@ const iceCreamSlice = createSlice({
   //   },
   // },
   extraReducers: (builder) => {
-    builder.addCase(cakeActions.ordered, (state) => {
-      state.numOfIceCream--;
-    });
+    builder.addCase(cakeActions.ordered);
   },
 });
 

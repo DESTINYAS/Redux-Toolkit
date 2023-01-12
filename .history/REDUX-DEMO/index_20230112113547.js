@@ -44,7 +44,7 @@ const initialCakeState = {
   numOfCakes: 10,
 };
 const initialIcecreamState = {
-  numOfIcecreams: 20,
+  numOfIcecreams: 10,
 };
 
 // (previousState,action)=>newState
